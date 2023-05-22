@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Instagram Feed con Bootstrap</title>
+</head>
+  <body>
+           <!--Navbar-->
+    <header>
+        <nav class="navbar bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <i class="bi bi-instagram"></i>
+                Instagram
+              </a>
+            
+              <!--Boton verde-->
+                          
+              <!--Dropdown-->
+              <div class="dropdown"> 
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#first_modal">
+                    Create a new post
+                  </button>
+
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-gear"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li><a class="dropdown-item" href="#">Accesibility </a></li>
+                  <li><a class="dropdown-item" href="#">Privacy and data</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item text-danger"  href="#">Log out</a></li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+            <!--Acción del boton verde-->
+            <div class="modal" tabindex="-1" id="first_modal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Create a new post</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h5 for="exampleFormControlTextarea1" class="form-label">Caption:</h5>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"  placeholder="Add the caption of your post here"></textarea>
+                        <i class="bi bi-camera-fill" id="ic-mo"></i>
+                        <i class="bi bi-geo-alt-fill" id="ic-mo"></i>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-success">Publish</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+    </header>
+    <!--Tabla de 9 imagenes-->
+    <section>
+        <ul class="nav nav-tabs justify-content-center" id="tabla" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+                <i class="bi bi-grid-3x3"></i>
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+                <i class="bi bi-square-fill"></i>
+              </button>
+            </li>
+          </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+        
+        
+                <div class="d-line d-flex flex-row m-1 p-1">
+                    <div class="row justifiy-content-center">
+                        <div class="col">
+                            <img src="./Imagenes/Carro Bootstrap.jpg" width="100%">
+                        </div>
+                        <div class="col">
+                            <img src="./Imagenes/Futbol bootstrap.jpg" height="89%" width="100%">
+                        </div>
+                        <div class="col">
+                            <img src="./Imagenes/Otoño bootstrap.jpg" width="100%">
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="d-line d-flex flex-row m-1 p-1">
+                    <div class="row justifiy-content-center">
+                        <div class="col">
+                            <img src="./Imagenes/Paseo familiar bootstrap.jpg" width="100%">
+                        </div>
+                        <div class="col">
+                            <img src="./Imagenes/Perro bootstrap.jpg" height="91%" width="100%">
+                        </div>
+                        <div class="col">
+                            <img src="./Imagenes/Pueblo bootstrap.jpg" height="91%" width="100%">
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="d-line d-flex flex-row m-1 p-1">
+                    <div class="row justifiy-content-center">
+                        <div class="col">
+                            <img src="./Imagenes/Universo bootstrap.jpg" height="89%" width="100%">
+                        </div>
+                        <div class="col">
+                            <img src="./Imagenes/Vacaciones bootstrap.jpg" height="89%" width="100%">
+                        </div>
+                        <div class="col">
+                            <img src="./Imagenes/vegetales bootstrap.jpg" height="89%" width="100%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Fotos SQUARE-->
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                <div class="d-flex flex-column justify-content-center" id="cont-fd">
+            
+                    <div class="card" style="width:30%;">
+                        <div class="card-title p-1 mb-0 row">
+                            <div class="col-8">
+                                <h5>Se vende</h5>
+                            </div>
+                            <div class="col-4 d-flex flex-row-reverse">
+                                <p>05/2023</p>
+                            </div>
+                        </div>
+                        <img src="./Imagenes/Carro Bootstrap.jpg">
+                        <div class="card-body p-1">
+                            <strong> 175 likes</strong>
+                            <p>Precio por DM</p>
+                        </div>
+                    </div>
+            
+                    <div class="card mt-2" style="width:30%;">
+                        <div class="card-title p-1 mb-0 row">
+                            <div class="col-8">
+                                <h5>Camp Nou</h5>
+                            </div>
+                            <div class="col-4 d-flex flex-row-reverse">
+                                <p>05/2023</p>
+                            </div>
+                        </div>
+                        <img src="./Imagenes/Futbol bootstrap.jpg">
+                        <div class="card-body p-1">
+                            <strong> 244 likes</strong>
+                            <p>Mes que un club</p>
+                        </div>
+                    </div>
+
+                    <div class="card mt-2" style="width:30%;">
+                        <div class="card-title p-1 mb-0 row">
+                            <div class="col-8">
+                                <h5>Otoño</h5>
+                            </div>
+                            <div class="col-4 d-flex flex-row-reverse">
+                                <p>05/2023</p>
+                            </div>
+                        </div>
+                        <img src="./Imagenes/Otoño bootstrap.jpg">
+                        <div class="card-body p-1">
+                            <strong> 75 likes</strong>
+                            <p>La mejor estación</p>
+                        </div>
+                    </div>
+
+                    <div class="card mt-2" style="width:30%;">
+                        <div class="card-title p-1 mb-0 row">
+                            <div class="col-8">
+                                <h5>De paseo</h5>
+                            </div>
+                            <div class="col-4 d-flex flex-row-reverse">
+                                <p>05/2023</p>
+                            </div>
+                        </div>
+                        <img src="./Imagenes/Paseo familiar bootstrap.jpg">
+                        <div class="card-body p-1">
+                            <strong> 523 likes</strong>
+                            <p>Mi mamá en sus tiempos</p>
+                        </div>
+                    </div>
+
+                    <div class="card mt-2" style="width:30%;">
+                        <div class="card-title p-1 mb-0 row">
+                            <div class="col-8">
+                                <h5>Firu</h5>
+                            </div>
+                            <div class="col-4 d-flex flex-row-reverse">
+                                <p>05/2023</p>
+                            </div>
+                        </div>
+                        <img src="./Imagenes/Perro bootstrap.jpg">
+                        <div class="card-body p-1">
+                            <strong> 1545 likes</strong>
+                            <p>El mejor amigo</p>
+                        </div>
+                    </div>
+
+                    <div class="card mt-2" style="width:30%;">
+                        <div class="card-title p-1 mb-0 row">
+                            <div class="col-8">
+                                <h5>El pueblo</h5>
+                            </div>
+                            <div class="col-4 d-flex flex-row-reverse">
+                                <p>05/2023</p>
+                            </div>
+                        </div>
+                        <img src="./Imagenes/Pueblo bootstrap.jpg">
+                        <div class="card-body p-1">
+                            <strong> 249 likes</strong>
+                            <p>Casa de mis abuelos</p>
+                        </div>
+                    </div>
+
+                    <div class="card mt-2" style="width:30%;">
+                        <div class="card-title p-1 mb-0 row">
+                            <div class="col-8">
+                                <h5>Universe</h5>
+                            </div>
+                            <div class="col-4 d-flex flex-row-reverse">
+                                <p>05/2023</p>
+                            </div>
+                        </div>
+                        <img src="./Imagenes/Universo bootstrap.jpg">
+                        <div class="card-body p-1">
+                            <strong> 358 likes</strong>
+                            <p>Al infinito</p>
+                        </div>
+                    </div>
+
+                    <div class="card mt-2" style="width:30%;">
+                        <div class="card-title p-1 mb-0 row">
+                            <div class="col-8">
+                                <h5>Arenita playita</h5>
+                            </div>
+                            <div class="col-4 d-flex flex-row-reverse">
+                                <p>05/2023</p>
+                            </div>
+                        </div>
+                        <img src="./Imagenes/Vacaciones bootstrap.jpg">
+                        <div class="card-body p-1">
+                            <strong> 824 likes</strong>
+                            <p>Vacaciones</p>
+                        </div>
+                    </div>
+
+                    <div class="card mt-2" style="width:30%;">
+                        <div class="card-title p-1 mb-0 row">
+                            <div class="col-8">
+                                <h5>Del campo</h5>
+                            </div>
+                            <div class="col-4 d-flex flex-row-reverse">
+                                <p>05/2023</p>
+                            </div>
+                        </div>
+                        <img src="./Imagenes/vegetales bootstrap.jpg">
+                        <div class="card-body p-1">
+                            <strong> 168 likes</strong>
+                            <p>Pa la dieta</p>
+                        </div>
+                    </div>
+
+                </div>
+            
+            </div>
+        </div>
+         
+        
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>
